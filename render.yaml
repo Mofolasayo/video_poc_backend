@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: video-poc-backend
+    env: node
+    plan: starter
+    buildCommand: npm install
+    startCommand: node server.js
+    healthCheckPath: /health
+    envVars:
+      - key: ZOOM_VIDEO_SDK_KEY
+        sync: false
+      - key: ZOOM_VIDEO_SDK_SECRET
+        sync: false
