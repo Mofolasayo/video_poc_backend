@@ -60,6 +60,7 @@ app.post('/video-sdk/token', (req, res) => {
 
   const payload = {
     app_key: sdkKey,
+    version: 1,
     tpc: sessionName,
     role_type: role,
     iat,
